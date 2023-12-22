@@ -1,0 +1,37 @@
+<% layout("/layouts/boilerPlates.ejs") %>
+
+<body>
+<div class="row mt-3">
+      <h2 class="col-6 offset-3"> <span style="color: #fe424d; ">Login</span> on WanderLust</h2>
+      <div class="col-6 offset-3">
+            <form action="/login" method="post" novalidate class="needs-validation">
+                  <br>
+                  <div class="md-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input name="username" 
+                        type="text" 
+                        placeholder="Username" 
+                        id="username"
+                        class="form-control" 
+                        required
+                        >
+                        <div class="invalid-feedback">Enter your Username</div>
+                  </div>
+                  <br>
+                  <div class="md-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input name="password" 
+                        type="password" 
+                        placeholder="Password" 
+                        id="password"
+                        class="form-control" 
+                        required
+                        >
+                        <div class="invalid-feedback">Enter your Password</div>
+                  </div>
+                  <br>
+                  <button class="btn edit-btn">LOGIN</button>
+            </form>
+      </div>
+</div>
+</body>

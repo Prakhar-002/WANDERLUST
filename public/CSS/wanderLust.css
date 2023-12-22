@@ -1,0 +1,159 @@
+body{
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+}
+.container{
+      flex: 1;
+}
+
+.navbar{
+      height: 5rem;
+      background-color: white;
+}
+
+.fa-compass{
+      color: #fe424d;
+      font-size: 2rem;
+}
+
+.nav-link{
+      color: #222222 !important;
+}
+
+.f-info-links a {
+      text-decoration: none;
+      color: #222222;
+
+}
+
+.f-info-links a:hover{
+      text-decoration: underline;
+} 
+
+
+.f-info-links, .f-info-socials, .f-info-brand{
+      width: 100%;
+      display:flex ;
+      justify-content: center;
+      align-items: center;
+}
+
+.f-info-socials i{
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      /* margin-top: 0.5rem; */
+}
+
+
+.f-info{
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      height: 8rem;
+      background-color: #ebebeb;
+      justify-content: center;
+      align-items: space-evenly;
+}
+
+/* cards... */
+.card{
+      border : none !important;
+      margin-bottom: 2rem;
+}
+
+.card-img-top{
+      border-radius: 0.8rem !important;
+      width: 100% !important;
+      object-fit: cover !important;
+}
+
+.card-body{
+      padding: 0 !important;
+}
+
+.card-text{
+      font-weight: 400 !important;
+}
+
+.listing-link{
+      text-decoration: none;
+}
+
+.card-img-overlay{
+      opacity: 0;
+}
+
+.card-img-overlay:hover{
+      opacity: 0.2;
+      background-color: white;
+}
+
+.edit-btn{
+      background-color: #fe424d !important;
+      border: none !important;
+      color: white;
+}
+
+/* show page  */
+.show-img{
+      height: 40vh;
+      width: 100% !important;
+}
+
+/* error page  */
+
+
+.heading{
+      position: absolute;
+      /* top: 10rem; */
+      /* left: 32%; */
+      background-color: #fff;
+      padding-top: -1rem;
+      border-radius: 10px;
+      padding-left: 1.5rem;
+      font-weight: 500;
+      background-color: #fff;
+      width: 30rem;
+}
+.heading h1{
+      /* background-image: url(https://images.unsplash.com/photo-1501777814630-33bc4a3c3ee7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhlYWx0aCUyMGJsdWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60); */
+      background-image:  url(https://images.unsplash.com/photo-1439127989242-c3749a012eac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fHJlZHxlbnwwfHwwfHx8MA%3D%3D);
+      /* background-image: url(heading.jpg); */
+      background-size: cover;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      /* line-height: 2.3rem; */
+      font-size: 10rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",  "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      text-align: center;
+}
+
+.err-msg{
+      color: #fe424d !important;
+      font-family: system-ui;
+      align-items: center;
+      text-align: center;
+      font-size: 1.5rem;
+
+}
+
+.err-btn{
+      align-items: center;
+      text-align: center;
+      background-color: #222222 !important;
+}
+
+.err-btn:hover{
+      color: #fe424d;
+}
+
+/* review card  */
+.review-card{
+      border: 0.01rem solid #222222; 
+      border-radius: 0.5rem;
+      box-shadow: 0.1rem 0.1rem 0.8rem #4b4b4b;
+
+}

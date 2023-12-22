@@ -1,0 +1,18 @@
+<% layout("/layouts/boilerPlates.ejs") %>
+
+
+<body>
+
+      <div class="heading offset-3 mt-5">
+            <h1>Oops!</h1>
+            <div class="mt-4">
+                  <p class="err-msg"><b></b> </p>
+                  <div class="alert alert-danger" role="alert">
+                        <%= err.statusCode %> - <%= err.message %>
+                  </div>
+            </div>
+            <center><a href="/listings" class="edit-btn btn mt-2 err-btn">GO TO ALL LISTINGS</a></center>
+      </div>  
+
+
+</body>

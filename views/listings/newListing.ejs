@@ -1,0 +1,77 @@
+<% layout("/layouts/boilerPlates.ejs") %>
+
+<body>
+      <br><br>
+      <div class="row">
+            <div class="col-8 offset-2">
+                  <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+                        <h3>Create A New Listing</h3>
+                        <br>
+                        <div class="md-3">
+                              <label for="title" class="form-label">Title</label>
+                              <input name="listing[title]" 
+                              type="text" 
+                              placeholder="Add A catchy Title" 
+                              class="form-control" 
+                              required
+                              >
+                              <div class="valid-feedback">Title looks Good !</div>
+                              <div class="invalid-feedback">Please give a title</div>
+                        </div>
+                        <br>
+
+                        <div class="md-3">
+                              <label for="description" class="form-label">Description</label>
+                              <textarea name="listing[description]"
+                              placeholder="..." 
+                              class="form-control"  
+                              required
+                              ></textarea>
+                              <div class="invalid-feedback">Please enter a small description</div>
+                        </div>
+                        <!-- <br>
+
+                        <div class="md-3">
+                              <label for="image" class="form-label">Image</label>
+                              <input type="text" name="listing[image]" placeholder="Image URL/LINK" class="form-control">
+                        </div> -->
+                        <br>
+
+                        <div class="md-3">
+                              <label for="image" class="form-label">Upload Listing Image</label>
+                              <input type="file" name="listing[image]"  class="form-control" required>
+                        </div>
+
+                        <br>
+                        <div class="row">
+
+                        <div class="md-3 col-md-4">
+                              <label for="price" class="form-label">Price</label>
+                              <input type="number" name="listing[price]" placeholder="Enter Price" class="form-control"  required>
+                              <div class="invalid-feedback">Price can not be empty</div>
+                        </div>
+                        
+
+                        
+                        <div class="md-3 col-md-8">
+                              <label for="country" class="form-label">Country</label>
+                              <input type="text" name="listing[country]" placeholder="India" class="form-control" value="India" required>
+                              <div class="invalid-feedback">Country should be valid and can not be empty</div>
+                        </div>
+
+                        </div>
+                        <br>
+
+                        <div class="md-3">
+                              <label for="location" class="form-label">Location</label>
+                              <input type="text" name="listing[location]" placeholder="Enter Location" class="form-control" required>
+                              <div class="invalid-feedback">Location should be valid and can not be empty</div>
+                        </div>
+                        <br>
+
+                        <button class="btn btn-dark edit-btn">ADD</button>
+                        <br><br>
+                  </form>
+            </div>
+      </div>
+</body>
