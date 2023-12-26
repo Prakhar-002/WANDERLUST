@@ -84,9 +84,10 @@ main()
             console.log(err);
       });
 
-// app.get("/" , (req , res) =>{
-//       res.send("Hi ! I'm root");
-// });
+app.get("/" , (req , res) =>{
+      // res.send("Hi ! I'm root");
+      res.redirect("/listings");
+});
 
 async function main(){
       // await mongoose.connect(mongo_URL);

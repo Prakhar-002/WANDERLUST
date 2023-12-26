@@ -158,7 +158,7 @@ const sampleListings = [
   {
     title: "Historic Brownstone in Boston",
     description:
-      "Step back in time in this elegant historic brownstone located in the heart of Boston.",
+      "Historic Brownstone in BostonStep back in time in this elegant historic brownstone located in the heart of Boston.",
     image: {
       filename: "listingimage",
       url: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
