@@ -7,7 +7,7 @@ Wonderlust is a `travel website` built using the `MEEN (MongoDB, Express, EJS, N
 
 <h1 align="center"> 
 
-<a href="https://wanderlust-002.onrender.com/"><strong> ➥ Live Demo 🛖
+<a href="https://wanderlust-002.onrender.com/"><strong> ➥ 🛖  Live Your Home 
 </strong></a>
 </h1>
 
