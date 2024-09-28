@@ -1,4 +1,4 @@
-# WONDERLUST ➺ Your Gateway to Global Adventures ✈️
+# WONDERLUST ➺🧳Your Gateway to Global Adventures ✈️
 
 
 Wonderlust is a `travel website` built using the `MEEN (MongoDB, Express, EJS, Node.js) stack`. It allows users to explore travel destinations, create itineraries, and share travel experiences.
