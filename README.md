@@ -1,13 +1,13 @@
-# WONDERLUST ➺🧳Your Gateway to Global Adventures ✈️
+# WANDERLUST ➺🧳Your Gateway to Global Adventures ✈️
 
 
-Wonderlust is a `travel website` built using the `MEEN (MongoDB, Express, EJS, Node.js) stack`. It allows users to explore travel destinations, create itineraries, and share travel experiences.
+Wanderlust is a `travel website` built using the `MEEN (MongoDB, Express, EJS, Node.js) stack`. It allows users to explore travel destinations, create itineraries, and share travel experiences.
 
 <br/>
 
 <h1 align="center"> 
 
-<a href="https://wanderlust-002.onrender.com/"><strong> ➥ 🛖  Live Your Home 
+<a href="https://wanderlust-002.onrender.com/"><strong> ➥ 🛖  Live Your Home
 </strong></a>
 </h1>
 
@@ -27,17 +27,39 @@ Wonderlust is a `travel website` built using the `MEEN (MongoDB, Express, EJS, N
 <br/>
 
 ## Features 🛍️ 📸 🎫
+
 - `User Authentication` ➤ Secure `login` and `signup` functionality.
 
 - `Explore Destinations` ➤ `Browse` and `discover` various travel **destinations**.
 
-- `Create and Manage Itineraries` ➤ Users can `create`, `edit`, and `delete` their travel `itineraries`
+- `Create and Manage Itineraries` ➤ Users can `create`, `edit`, and `delete` your travel `itineraries`
 
-- `Blog Integration` ➤ Share travel `stories` and `experiences` through blogs.
+- `Blog Integration` ➤ Share travel `stories` and `experiences` through blogs/Comments.
 
 - `Responsive Design` ➤ Optimized for `mobile` and `desktop` viewing.
 
 <br/>
+
+## 🤖 Technical Details 👩🏻‍💻
+
+- `mongoose` ➤ Utilized for `interacting` with MongoDB
+
+- `Express` ➤ web `framework` for `Node.js` provide HTTP utility `methods` and `middlewares`
+
+- `EJS` ➤ template language to `generate` `HTML` markup with plain `JavaScrip`
+
+- `Nodemon` ➤ automatically `restarts` the `Node.js server` when file changes in
+
+- `Cloudinary` ➤ use for `storing` the `Images`
+
+- `Joi` ➤ For `validate` the `data`
+
+- `Passport` ➤  for authentication user `registration, login, and password hashing`
+
+- `method-override` ➤ Middleware for overriding HTTP methods (e.g., from *`POST`* to `PUT` or `DELETE`)
+
+<br/>
+
 
 ## Deployment ✈️ 
 
@@ -45,11 +67,13 @@ Wonderlust is a `travel website` built using the `MEEN (MongoDB, Express, EJS, N
 
 
 `For window 🍃`
+
 ```bash
   git clone https://github.com/Prakhar-002/WANDERLUST.git
 ```
 
 `For Linux and macOS 🌿`
+
 ```bash
   sudo git clone https://github.com/Prakhar-002/WANDERLUST.git
 ```
