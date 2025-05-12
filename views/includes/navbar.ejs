@@ -1,55 +1,136 @@
 <style>
-      .search-btn{
-            background-color: #fe424d;
-            color: #fff;
-            border-radius: 20px;
-            padding: 0 1rem 0 1rem;
+      /* ========== Search Input & Button ========== */
+      .search-inp {
+            border-radius: 30px;
+            padding: 0.5rem 1rem 0.5rem 2.5rem;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 300px;
+            transition: 0.3s;
       }
 
-      .search-btn:hover{
+      .search-inp:focus {
+            border-color: #fe424d;
+            box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.2);
+            outline: none;
+      }
+
+      .search-btn {
             background-color: #fe424d;
-            color: #000;
+            color: #fff;
+            border-radius: 30px;
+            padding: 0.4rem 1.2rem;
+            font-weight: 600;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 12px rgba(254, 66, 77, 0.3);
+            border: none;
+      }
+
+      .search-btn:hover {
+            background-color: #fff;
+            color: #fe424d;
+            border: 1px solid #fe424d;
       }
 
       .search-btn i {
-            display: inline;
-            margin-right: 0.5rem;
+            margin-right: 0.4rem;
       }
 
-      .search-inp{
-            border-radius: 20px;
-            padding: 0.5rem 1rem 0.5rem 3rem;
+      /* ========== Navbar Styling ========== */
+      .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            z-index: 1000;
+      }
+
+      .navbar-brand {
+            font-weight: 700;
+            color: #fe424d !important;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+      }
+
+      .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            background-color: #fe424d;
+            margin-left: 0.3rem;
+            border: 1px solid transparent;
+      }
+
+      .nav-link:hover {
+            background-color: #fff;
+            color: #fe424d !important;
+            border: 1px solid #fe424d;
+      }
+
+      /* ========== Mobile Responsive ========== */
+      @media (max-width: 768px) {
+            form.d-flex {
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 0.5rem;
+                  width: 100%;
+            }
+
+            .search-inp,
+            .search-btn {
+                  width: 100%;
+                  max-width: 100%;
+            }
+
+            .nav-link {
+                  margin-left: 0;
+                  margin-bottom: 0.3rem;
+                  text-align: center;
+            }
       }
 </style>
 
+<nav class="navbar navbar-expand-lg border-bottom sticky-top">
+      <div class="container-fluid px-4">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="/listings">
+                  <i class="fa-solid fa-location-dot me-2"></i>WanderLust
+            </a>
 
-<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
-      <div class="container-fluid">
-            <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-            <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavAltMarkup"
-            <span class="navbar-toggler-icon"></span>
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                        <a class="nav-link" href="/listings"><b>EXPLORE</b></a>
+                  <!-- Left Links -->
+                  <div class="navbar-nav me-auto">
+                        <a class="nav-link" href="/listings/new">Add Place</a>
                   </div>
-                  <div class="navbar-nav ms-auto ">
-                        <form class="d-flex" role="search">
-                              <input class="form-control me-2 search-inp" type="search" placeholder="Search Destination">
-                              <button class="btn search-btn" type="submit">
-                                    <i class="fa-brands fa-searchengin"></i>Search</button>
-                        </form>
-                  </div>
-                  <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="/listings/new">Airbnb your home</a>
+
+                  <!-- Search Bar -->
+                  <form class="d-flex me-lg-3" role="search">
+                        <input class="form-control me-2 search-inp" type="search" placeholder="Search Destination">
+                        <button class="btn search-btn" type="submit">
+                              Search
+                        </button>
+                  </form>
+
+                  <!-- Auth Buttons -->
+                  <div class="navbar-nav d-flex align-items-center gap-2">
                         <% if (!curUser) { %>
-                              <a class="nav-link" href="/login"><b>LOGIN</b></a>
-                              <a class="nav-link" href="/signup" ><b>SIGNUP</b></a>
+                              <a class="nav-link" href="/login">Login</a>
+                              <a class="nav-link" href="/signup">Signup</a>
                         <% } %>
                         <% if (curUser) { %>
-                              <a class="nav-link" href="/logout"><b>LOGOUT</b></a>
+                              <a class="nav-link" href="/logout">Logout</a>
                         <% } %>
                   </div>
             </div>

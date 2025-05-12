@@ -1,54 +1,43 @@
 <% layout("/layouts/boilerPlates.ejs") %>
 
-<body>
-<div class="row mt-3">
-      <h2 class="col-6 offset-3"> <span style="color: #fe424d; ">Signup</span> on WanderLust</h2>
-      <div class="col-6 offset-3">
-            <form action="/signup" method="post" novalidate class="needs-validation">
-                  <br>
-                  <div class="md-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input name="username" 
-                        type="text" 
-                        placeholder="Username" 
-                        id="username"
-                        class="form-control" 
-                        required
-                        >
-                        <div class="valid-feedback">Looks Good !</div>
-                        <div class="invalid-feedback">Please give a username</div>
-                  </div>
-                  <br>
-                  <div class="md-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input name="email" 
-                        type="email" 
-                        placeholder="Email" 
-                        id="email"
-                        class="form-control" 
-                        required
-                        >
-                        <div class="valid-feedback">Looks Good !</div>
-                        <div class="invalid-feedback">Please give a Email</div>
-                  </div>
-                  <br>
-                  <div class="md-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input name="password" 
-                        type="password" 
-                        placeholder="Password" 
-                        id="password"
-                        class="form-control" 
-                        required
-                        >
-                        <div class="valid-feedback">Looks Good !</div>
-                        <div class="invalid-feedback">Please give a password</div>
-                  </div>
-                  <br>
-                  <button class="btn edit-btn">SIGNUP</button>
-            </form>
-      </div>
-</div>
-</body>
+      <body>
+            <div class="row mt-5">
+                  <h2 class="col-12 text-center mb-4">
+                        <span style="color: #fe424d;">Signup</span> on WanderLust
+                  </h2>
+                  <div class="col-md-6 offset-md-3 col-12">
+                        <form action="/signup" method="post" novalidate class="needs-validation">
+                              <!-- Username Field -->
+                              <div class="mb-3">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input name="username" type="text" placeholder="Username" id="username"
+                                          class="form-control" required>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please provide a username.</div>
+                              </div>
 
+                              <!-- Email Field -->
+                              <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input name="email" type="email" placeholder="Email" id="email" class="form-control"
+                                          required>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please provide an email.</div>
+                              </div>
 
+                              <!-- Password Field -->
+                              <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input name="password" type="password" placeholder="Password" id="password"
+                                          class="form-control" required>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please provide a password.</div>
+                              </div>
+
+                              <!-- Submit Button -->
+                              <button class="btn btn-danger w-100" type="submit">SIGNUP</button>
+                        </form>
+                  </div>
+            </div>
+
+      </body>

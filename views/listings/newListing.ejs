@@ -1,77 +1,62 @@
 <% layout("/layouts/boilerPlates.ejs") %>
 
 <body>
-      <br><br>
-      <div class="row">
-            <div class="col-8 offset-2">
-                  <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
-                        <h3><span style="color: #fe424d; ">Create</span> A New Listing</h3>
-                        <br>
-                        <div class="md-3">
-                              <label for="title" class="form-label">Title</label>
-                              <input name="listing[title]" 
-                              type="text" 
-                              placeholder="Add A catchy Title" 
-                              class="form-control" 
-                              required
-                              >
-                              <div class="valid-feedback">Title looks Good !</div>
-                              <div class="invalid-feedback">Please give a title</div>
-                        </div>
-                        <br>
+      <div class="container mt-2">
+            <div class="row justify-content-center">
+                  <div class="col-md-8">
+                        <form action="/listings" method="post" novalidate class="needs-validation bg-white p-4 p-md-5 shadow rounded-4" enctype="multipart/form-data">
+                              <h3 class="mb-4 fw-bold">
+                                    <span class="text-danger">Create</span> A New Listing
+                              </h3>
 
-                        <div class="md-3">
-                              <label for="description" class="form-label">Description</label>
-                              <textarea name="listing[description]"
-                              placeholder="..." 
-                              class="form-control"  
-                              required
-                              ></textarea>
-                              <div class="invalid-feedback">Please enter a small description</div>
-                        </div>
-                        <!-- <br>
+                              <!-- Title -->
+                              <div class="mb-3">
+                                    <label for="title" class="form-label">Title</label>
+                                    <input name="listing[title]" type="text" class="form-control" placeholder="Add a catchy title" required>
+                                    <div class="valid-feedback">Title looks good!</div>
+                                    <div class="invalid-feedback">Please give a title.</div>
+                              </div>
 
-                        <div class="md-3">
-                              <label for="image" class="form-label">Image</label>
-                              <input type="text" name="listing[image]" placeholder="Image URL/LINK" class="form-control">
-                        </div> -->
-                        <br>
+                              <!-- Description -->
+                              <div class="mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea name="listing[description]" class="form-control" placeholder="Write a short description..." required></textarea>
+                                    <div class="invalid-feedback">Please enter a description.</div>
+                              </div>
 
-                        <div class="md-3">
-                              <label for="image" class="form-label">Upload Listing Image</label>
-                              <input type="file" name="listing[image]"  class="form-control" required>
-                        </div>
+                              <!-- Image Upload -->
+                              <div class="mb-3">
+                                    <label for="image" class="form-label">Upload Listing Image</label>
+                                    <input type="file" name="listing[image]" class="form-control" required>
+                                    <div class="invalid-feedback">Please upload an image.</div>
+                              </div>
 
-                        <br>
-                        <div class="row">
+                              <!-- Price & Country -->
+                              <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                          <label for="price" class="form-label">Price</label>
+                                          <input type="number" name="listing[price]" class="form-control" placeholder="Enter price" required>
+                                          <div class="invalid-feedback">Price cannot be empty.</div>
+                                    </div>
 
-                        <div class="md-3 col-md-4">
-                              <label for="price" class="form-label">Price</label>
-                              <input type="number" name="listing[price]" placeholder="Enter Price" class="form-control"  required>
-                              <div class="invalid-feedback">Price can not be empty</div>
-                        </div>
-                        
+                                    <div class="col-md-8 mb-3">
+                                          <label for="country" class="form-label">Country</label>
+                                          <input type="text" name="listing[country]" class="form-control" placeholder="India" value="India" required>
+                                          <div class="invalid-feedback">Country cannot be empty.</div>
+                                    </div>
+                              </div>
 
-                        
-                        <div class="md-3 col-md-8">
-                              <label for="country" class="form-label">Country</label>
-                              <input type="text" name="listing[country]" placeholder="India" class="form-control" value="India" required>
-                              <div class="invalid-feedback">Country should be valid and can not be empty</div>
-                        </div>
+                              <!-- Location -->
+                              <div class="mb-4">
+                                    <label for="location" class="form-label">Location</label>
+                                    <input type="text" name="listing[location]" class="form-control" placeholder="Enter location" required>
+                                    <div class="invalid-feedback">Location cannot be empty.</div>
+                              </div>
 
-                        </div>
-                        <br>
-
-                        <div class="md-3">
-                              <label for="location" class="form-label">Location</label>
-                              <input type="text" name="listing[location]" placeholder="Enter Location" class="form-control" required>
-                              <div class="invalid-feedback">Location should be valid and can not be empty</div>
-                        </div>
-                        <br>
-
-                        <button class="btn btn-dark edit-btn">ADD</button>
-                        <br><br>
-                  </form>
+                              <!-- Submit Button -->
+                              <button class="btn btn-danger px-4 py-2 fw-semibold rounded-pill">ADD</button>
+                        </form>
+                  </div>
             </div>
       </div>
 </body>

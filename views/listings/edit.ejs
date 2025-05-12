@@ -1,64 +1,69 @@
 <% layout("/layouts/boilerPlates.ejs") %>
 
-<body>
-<div class="row">
-      <div class="col-8 offset-2">
-            <br><br>
-            <h3><span style="color: #fe424d; ">Edit</span> This Listing</h3>
-            <br>
-            <form method="post" action="/listings/<%= listing.id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
-                  <div class="md-3">
-                        <label for="title" class="form-label">Title</label>
-                        <input name="listing[title]" class="form-control" type="text" value="<%= listing.title %>"  required/>
-                        <div class="valid-feedback">Title looks Good !</div>
-                              <div class="invalid-feedback">Please give a title</div>
+      <body>
+            <div class="row">
+                  <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12">
+                        <h3 class="mt-5 mb-4">
+                              <span style="color: #fe424d;">Edit</span> This Listing
+                        </h3>
+
+                        <form method="post" action="/listings/<%= listing.id %>?_method=PUT" novalidate
+                              class="needs-validation p-4 shadow rounded-4 bg-light" enctype="multipart/form-data">
+
+                              <div class="mb-4">
+                                    <label for="title" class="form-label">Title</label>
+                                    <input name="listing[title]" class="form-control" type="text"
+                                          value="<%= listing.title %>" required />
+                                    <div class="valid-feedback">Title looks good!</div>
+                                    <div class="invalid-feedback">Please give a title</div>
+                              </div>
+
+                              <div class="mb-4">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea name="listing[description]" class="form-control" rows="4"
+                                          required><%= listing.description %></textarea>
+                                    <div class="invalid-feedback">Please enter a small description</div>
+                              </div>
+
+                              <div class="mb-4">
+                                    <label class="form-label">Current Image</label><br>
+                                    <img src="<%= originalImageUrl %>" class="img-thumbnail" style="max-height: 200px;">
+                              </div>
+
+                              <div class="mb-4">
+                                    <label for="image" class="form-label">Upload New Image</label>
+                                    <input type="file" name="listing[image]" class="form-control" />
+                                    <div class="invalid-feedback">Upload a new image file</div>
+                              </div>
+
+                              <div class="row mb-4">
+                                    <div class="col-md-4">
+                                          <label for="price" class="form-label">Price</label>
+                                          <input type="number" value="<%= listing.price %>" class="form-control"
+                                                name="listing[price]" required />
+                                          <div class="invalid-feedback">Price cannot be empty</div>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                          <label for="country" class="form-label">Country</label>
+                                          <input type="text" value="<%= listing.country %>" class="form-control"
+                                                name="listing[country]" required />
+                                          <div class="invalid-feedback">Country cannot be empty</div>
+                                    </div>
+                              </div>
+
+                              <div class="mb-4">
+                                    <label for="location" class="form-label">Location</label>
+                                    <input type="text" value="<%= listing.location %>" class="form-control"
+                                          name="listing[location]" required />
+                                    <div class="invalid-feedback">Location cannot be empty</div>
+                              </div>
+
+                              <div class="text-end">
+                                    <button class="btn btn-danger px-4 py-2 rounded-pill">Edit Listing</button>
+                              </div>
+                        </form>
                   </div>
-                  <br />
+            </div>
 
-                  <div class="md-3">
-                        <label for="description" class="form-label">Description</label>
-                        <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
-                        <div class="invalid-feedback">Please enter a small description</div>
-                  </div>
-                  <br />
-
-                  <div class="md-3">
-                        <img src="<%= originalImageUrl %>" class="img-thumbnail" >
-                  </div>
-                  <br />
-
-                  <div class="md-3">
-                        <label for="image" class="form-label">Upload Image</label>
-                        <input type="file" name="listing[image]" class="form-control" />
-                        <div class="invalid-feedback">Upload new Image file</div>
-                  </div>
-                  <br />
-
-                  <div class="row">
-                        <div class="md-3 col-md-4">
-                              <label for="price" class="form-label">Price</label>
-                              <input type="number" value="<%= listing.price %>" class="form-control" name="listing[price]" required />
-                              <div class="invalid-feedback">Price can not be empty</div>
-                        </div>
-
-                        <div class="md-3 col-md-8">
-                              <label for="country" class="form-label">Country</label>
-                              <input type="text" value="<%= listing.country %>" class="form-control"name="listing[country]" required />
-                              <div class="invalid-feedback">Country should be valid and can not be empty</div>
-                        </div>
-                  </div>
-                  <br />
-
-                  <div class="md-3">
-                        <label for="location" class="form-label">Location</label>
-                        <input type="text" value="<%= listing.location %>" class="form-control" name="listing[location]" required />
-                        <div class="invalid-feedback">Location should be valid and can not be empty</div>
-                  </div>
-                  <br />
-
-                  <button class="edit-btn btn">EDIT</button>
-                  <br><br>
-            </form>
-      </div>
-</div>
-</body>
+      </body>
